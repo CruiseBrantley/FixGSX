@@ -1,8 +1,22 @@
 const scanGSX = setInterval(() => {
+  if (
+    document.querySelector(
+      'input[name="repairDetails.repairOrderDetails[0].serialNumber"]'
+    )
+  ) {
+    kgb = document.querySelector(
+      'input[name="repairDetails.repairOrderDetails[0].serialNumber"]'
+    );
+    kbb = document.querySelector(
+      'input[name="repairDetails.repairOrderDetails[0].oldSerialNumber"]'
+    );
+    kgb.value = kgb.value.toUpperCase();
+    kbb.value = kbb.value.toUpperCase();
+  }
   if (document.querySelector(".link") != null) {
     document.querySelector(".link").style.display = "inline";
   }
-  if (document.querySelector("table") != null) {
+  if (document.querySelector("#arrived_order_report") != null) {
     // clearInterval(scanGSX);
     const table = document.querySelector("table");
     const tableHead = table.children[1].children[0];
