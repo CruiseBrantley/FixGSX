@@ -1,7 +1,7 @@
 {
   "name": "FixGSX",
   "version": "0.0.0.3",
-  "description": "Make GSX less terrible... again?",
+  "description": "Optimizes GSX workflow UI",
   "permissions": ["activeTab", "declarativeContent"],
   "content_scripts": [
     {
