@@ -1,0 +1,33 @@
+{
+  "name": "FixGSX",
+  "version": "0.0.0.1",
+  "description": "Make GSX less terrible... again?",
+  "permissions": ["activeTab", "declarativeContent"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://gsx.apple.com/WebApp/home.htm",
+        "https://gsxapp.apple.com/WebApp/home.htm",
+        "https://gsxapp.apple.com/WebApp/home.htm?fromLogin=true",
+        "https://gsx.apple.com/WebApp/home.htm?fromLogin=true"
+      ],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/apple-logo16.png",
+      "32": "images/apple-logo32.png",
+      "48": "images/apple-logo48.png",
+      "128": "images/apple-logo128.png"
+    }
+  },
+  "icons": {
+    "16": "images/apple-logo16.png",
+    "32": "images/apple-logo32.png",
+    "48": "images/apple-logo48.png",
+    "128": "images/apple-logo128.png"
+  },
+  "manifest_version": 2
+}
