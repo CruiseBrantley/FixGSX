@@ -1,15 +1,13 @@
 {
   "name": "FixGSX",
-  "version": "0.0.0.2",
+  "version": "0.0.0.3",
   "description": "Make GSX less terrible... again?",
   "permissions": ["activeTab", "declarativeContent"],
   "content_scripts": [
     {
       "matches": [
-        "https://gsx.apple.com/WebApp/home.htm",
-        "https://gsxapp.apple.com/WebApp/home.htm",
-        "https://gsxapp.apple.com/WebApp/home.htm?fromLogin=true",
-        "https://gsx.apple.com/WebApp/home.htm?fromLogin=true"
+        "https://gsx.apple.com/WebApp*",
+        "https://gsxapp.apple.com/WebApp/*"
       ],
       "js": ["contentScript.js"]
     }
