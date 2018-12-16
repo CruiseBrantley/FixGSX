@@ -10,7 +10,7 @@ function constructOptions() {
       ? (data.options.alignCells = true)
       : null;
     const alignCellsText = document.createElement("span");
-    alignCellsText.innerHTML = "Move G-values to leftmost cell.";
+    alignCellsText.innerHTML = "Move Dispatch ID to leftmost cell.";
     const alignCellsCheckbox = createCheckbox(
       "alignCells",
       data.options.alignCells
