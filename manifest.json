@@ -1,6 +1,6 @@
 {
   "name": "FixGSX",
-  "version": "0.0.0.3",
+  "version": "0.0.1.0",
   "description": "Optimizes GSX workflow UI",
   "permissions": ["activeTab", "declarativeContent", "storage"],
   "background": {
