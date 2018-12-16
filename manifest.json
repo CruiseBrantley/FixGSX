@@ -2,7 +2,7 @@
   "name": "FixGSX",
   "version": "0.0.0.3",
   "description": "Optimizes GSX workflow UI",
-  "permissions": ["activeTab", "declarativeContent"],
+  "permissions": ["activeTab", "declarativeContent", "storage"],
   "content_scripts": [
     {
       "matches": [
@@ -12,6 +12,7 @@
       "js": ["contentScript.js"]
     }
   ],
+  "options_page": "options.html",
   "page_action": {
     "default_popup": "popup.html",
     "default_icon": {
