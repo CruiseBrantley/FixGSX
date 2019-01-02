@@ -45,7 +45,8 @@ function getData() {
         data.options.alignCells
       ) {
         // clearInterval(scanGSX);
-        const table = document.querySelector("table");
+        const table = document.querySelector("#arrived_order_report")
+          .children[0].children[1];
         const tableHead = table.children[1].children[0];
         const tableBody = table.children[3];
         const searchBox = document.querySelector("#global_search");
