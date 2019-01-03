@@ -1,4 +1,4 @@
-var runOnce = false;
+var hasRunOnce = false;
 function getData() {
   chrome.storage.local.get("options", data => {
     if (
@@ -22,13 +22,13 @@ function getData() {
       removeConfirmWaitFunction(data);
       moveDispatchIDFunction(data);
       removeAutoLogout(data);
-      runOnce = true;
+      hasRunOnce = true;
     }
   });
 }
 
 function removeAutoLogout(data) {
-  if (data.options.removeAutoLogout && !runOnce) {
+  if (data.options.removeAutoLogout && !hasRunOnce) {
     function disablerAutoLogout() {
       const legacyConfirm = window.confirm;
       window.confirm = function confirm(msg) {
@@ -66,6 +66,7 @@ function moveDispatchIDFunction(data) {
     }
     if (
       tableBody.children.length > 0 &&
+      tableHead.children[0].innerText === "Dispatch ID\n" &&
       tableBody.children[0].cells[10].innerText.charAt(0) === "G"
     ) {
       for (let i = 0; i < tableBody.children.length; i++) {
