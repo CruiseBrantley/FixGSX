@@ -33,6 +33,16 @@ function constructOptions() {
       data.options.autoCapitalize
     );
 
+    !data.options.hasOwnProperty("removeAutoLogout")
+      ? (data.options.removeAutoLogout = true)
+      : null;
+    const removeAutoLogoutText = document.createElement("span");
+    removeAutoLogoutText.innerHTML = "Remove Auto-Logout";
+    const removeAutoLogoutCheckbox = createCheckbox(
+      "removeAutoLogout",
+      data.options.removeAutoLogout
+    );
+
     page.appendChild(alignCellsCheckbox);
     page.appendChild(alignCellsText);
     page.appendChild(document.createElement("br"));
@@ -43,6 +53,10 @@ function constructOptions() {
 
     page.appendChild(autoCapitalizeCheckbox);
     page.appendChild(autoCapitalizeText);
+    page.appendChild(document.createElement("br"));
+
+    page.appendChild(removeAutoLogoutCheckbox);
+    page.appendChild(removeAutoLogoutText);
     page.appendChild(document.createElement("br"));
   });
 }
