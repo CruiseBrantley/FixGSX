@@ -121,4 +121,4 @@ function autoCapitalizeFunction(data) {
   }
 }
 
-setInterval(() => getData(), 1000);
+setInterval(() => getData(), 500);
