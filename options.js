@@ -37,7 +37,8 @@ function constructOptions() {
       ? (data.options.removeAutoLogout = true)
       : null;
     const removeAutoLogoutText = document.createElement("span");
-    removeAutoLogoutText.innerHTML = "Remove Auto-Logout";
+    removeAutoLogoutText.innerHTML =
+      "Remove Auto-Logout (Requires page refresh)";
     const removeAutoLogoutCheckbox = createCheckbox(
       "removeAutoLogout",
       data.options.removeAutoLogout
